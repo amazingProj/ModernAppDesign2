@@ -1,0 +1,273 @@
+﻿<Window x:Class="ModernAppDesign2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ModernAppDesign2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="900"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        Background="#181735">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <Grid
+            MouseDown="Grid_MouseDown"
+            Background="#0f0f2d"
+            Grid.ColumnSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Text="Asteroids"
+                Foreground="LightGray"
+                Grid.Column="1"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"
+                FontWeight="Medium"
+                FontFamily="Fonts/#Dosis"/>
+            <TextBlock Text="Menu"
+                Foreground="LightGray"
+                Grid.Column="2"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"
+                FontWeight="Medium"
+                FontFamily="Fonts/#Dosis"/>
+
+            <TextBlock Text="Website"
+                Foreground="LightGray"
+                Grid.Column="3"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"
+                FontWeight="Medium"
+                FontFamily="Fonts/#Dosis"/>
+
+            <Button Content="Start"
+                        Foreground="White"
+                        FontSize="10"
+                        FontWeight="Medium"
+                        Grid.Column="11"
+                    Grid.ColumnSpan="2"
+                    Margin="56.4,1,6.4,-1.2" RenderTransformOrigin="0.151,0.363">
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="TextElement.FontFamily" Value="Fonts/#Dosis"
+                                    />
+                        <Setter Property="Background" Value="#FE6584"
+                                    />
+                        <Setter Property="Cursor" Value="Hand" />
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#FF4C70" />
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border Width="75" Height="15" CornerRadius="8"
+                                    Background="{TemplateBinding Background}"
+                                    >
+                            <ContentPresenter VerticalAlignment="Center" 
+                                                  HorizontalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+
+        </Grid>
+
+        <StackPanel Grid.Row="1"
+                    VerticalAlignment="Center"
+                    Margin="60">
+
+            <StackPanel>
+                <StackPanel Orientation="Horizontal"
+                            Margin="0,0,0,20">
+                    <Image
+                    Source="Images/Asteriod.png"
+                    Width="90" Height="70" 
+                        RenderOptions.BitmapScalingMode="Fant"/>
+                    <TextBlock Text="Asteroids"
+                               Margin="10,0,0,0"
+                           Foreground="White"
+                           FontSize="20"
+                           FontWeight="Medium"
+                           VerticalAlignment="Center"
+                           
+                           FontFamily="Fonts/#Dosis"/>
+                </StackPanel>
+                <TextBlock 
+                Text="Customize"
+                Foreground="White"
+                FontSize="25"
+                FontFamily="/Fonts/#Dosis"
+                FontWeight="Medium"/>
+                <TextBlock 
+                Text="Your"
+                Foreground="White"
+                FontSize="25"
+                FontFamily="/Fonts/#Dosis"
+                FontWeight="Medium"/>
+                <TextBlock 
+                Text="Experience"
+                Foreground="White"
+                FontSize="25"
+                FontFamily="/Fonts/#Dosis"
+                FontWeight="Medium"/>
+                <TextBlock 
+                Text="There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable."
+                Foreground="White"
+                FontSize="12"
+                FontFamily="/Fonts/#Dosis"
+                FontWeight="Medium"
+                TextWrapping="Wrap"
+                    Margin="0,10,0,0"/>
+            </StackPanel>
+            
+            <StackPanel Orientation="Horizontal"
+                        Margin="0,15,0,0">
+                <Button Content="Start"
+                        Foreground="White"
+                        FontSize="13"
+                        FontWeight="Medium"
+                        >
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="TextElement.FontFamily" Value="Fonts/#Dosis"
+                                    />
+                            <Setter Property="Background" Value="#FE6584"
+                                    />
+                            <Setter Property="Cursor" Value="Hand" />
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#FF4C70" />
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border Width="100" Height="25" CornerRadius="12"
+                                    Background="{TemplateBinding Background}"
+                                    >
+                                <ContentPresenter VerticalAlignment="Center" 
+                                                  HorizontalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+
+                <Button Content="Register"
+                        Foreground="White"
+                        FontSize="13"
+                        FontWeight="Medium"
+                        Margin="5,0,10,0"
+                        >
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="TextElement.FontFamily" Value="Fonts/#Dosis"
+                                    />
+                            <Setter Property="Background" Value="#39385d"
+                                    />
+                            <Setter Property="Cursor" Value="Hand" />
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#3a3950" />
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border Width="100" Height="25" CornerRadius="12"
+                                    Background="{TemplateBinding Background}"
+                                    >
+                                <ContentPresenter VerticalAlignment="Center" 
+                                                  HorizontalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+
+            </StackPanel>
+        </StackPanel>
+
+        <Grid Grid.Column="1" Grid.RowSpan="2"
+              Panel.ZIndex="-1"
+              Margin="160, -365, -610, 85">
+            <Grid.RenderTransform>
+                <RotateTransform Angle="50" />
+            </Grid.RenderTransform>
+            <StackPanel Orientation="Horizontal"
+                        Margin="-350, 250, -255, -250">
+                <StackPanel>
+                    <Border Width="700"
+                            Height="35"
+                            Background="#3dddc2"
+                            Margin="150,0,0,0"
+                            CornerRadius="20"/>
+
+                    <Border Width="700"
+                            Height="35"
+                            Background="#fc6586"
+                            Margin="0,15,0,0"
+                            CornerRadius="20"/>
+
+                    <Border Width="700"
+                            Height="35"
+                            Background="#383660"
+                            Margin="75,15,0,0"
+                            CornerRadius="20"/>
+                </StackPanel>
+
+                <StackPanel>
+                    <Border Width="700"
+                            Height="35"
+                            Background="#3dddc2"
+                            Margin="150,0,0,0"
+                            CornerRadius="20"/>
+
+                    <Border Width="700"
+                            Height="35"
+                            Background="#fc6586"
+                            Margin="0,15,0,0"
+                            CornerRadius="20"/>
+
+                    <Border Width="700"
+                            Height="35"
+                            Background="#383660"
+                            Margin="75,15,0,0"
+                            CornerRadius="20"/>
+                </StackPanel>
+
+            </StackPanel>
+        </Grid>
+    </Grid>
+
+
+</Window>
